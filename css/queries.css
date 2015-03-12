@@ -10,10 +10,12 @@
 	.screenshots-intro{padding:110px 0 100px 0;}
 	.feature-content{width:80%;}
 	.features-slider{height:100%}
+	.tag {float: left;text-align: left;}
 }
 @media screen and (max-width:680px){
 	.feature-content{width:60%;}
 	.footer li {float: left;}
+
 }
 @media screen and (max-width:640px){
 	/* .use-btn{display:none;} */
