@@ -600,9 +600,11 @@ Hero
     font-weight: 300;
     font-size: 45px;
 }
-.hero h1 span {
-    display: inline-block;
-    color: #a1a9b0;
+h1#wall-of-fame {
+  border-top: 4px white solid;
+  display: inline-block;
+  margin-top: 20px;
+  padding-top: 10px;
 }
 #home {
     width: 100%;
@@ -1100,4 +1102,19 @@ Waypoints
 .delay-1s {
     -webkit-animation-delay: 1s;
     animation-delay: 1s;
+}
+
+
+/* ==========================================================================
+Bootstrap Modifications
+========================================================================== */
+
+
+.img-circle {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  margin-top: 10px;
+  margin-right: 20px;
+
 }
