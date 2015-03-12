@@ -1,0 +1,56 @@
+source 'https://rubygems.org'
+
+# Core
+gem 'rails', '4.2.0'
+gem 'puma'
+gem 'pg'
+gem 'sidekiq'
+
+# Assets
+gem 'sass-rails'
+gem 'uglifier'
+gem 'autoprefixer-rails'
+gem 'jquery-rails'
+gem 'asset_sync'
+
+# Extensions
+gem 'turbolinks'
+
+# Helpers
+gem 'flutie'
+gem 'high_voltage'
+
+# Users
+gem 'sorcery'
+gem 'email_validator'
+
+group :development do
+  gem 'quiet_assets'
+  gem 'pry-rails'
+  gem 'pry-rescue'
+  gem 'pry-stack_explorer'
+  gem 'pry-byebug'
+  gem 'byebug'
+  gem 'web-console'
+  gem 'rubocop'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+end
+
+group :development, :test do
+  gem 'dotenv-rails'
+end
+
+group :test do
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'shoulda-matchers'
+  gem 'codeclimate-test-reporter', require: false
+  gem 'vcr'
+  gem 'webmock'
+end
+
+group :production do
+  gem 'rails_12factor'
+  gem 'rack-timeout'
+end

@@ -1,0 +1,7 @@
+/.bundle
+/log/*.log
+/tmp
+.env
+/coverage
+public/system
+public/assets
