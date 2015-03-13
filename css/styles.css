@@ -594,6 +594,7 @@ Hero
     background: rgb(40, 70, 102) url('../img/piday-bg.jpg') no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
+    background-position: 10% 0%;
     color: #fff;
 }
 .hero h1 {
