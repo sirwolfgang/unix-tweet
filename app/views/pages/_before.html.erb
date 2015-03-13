@@ -15,11 +15,20 @@
         </div>
 
       </div>
-      
+
       <% if logged_in? %>
         <div class="row hero-content">
           <div class="col-md-12">
-            Signed Up
+            <h1>Your tweet has been scheduled!</h1>
+            <p class="lead">It will be sent at your local Pi time (pm) on March 14.</p>
+            <p class="lead">Share tweety-pi with your friends?</p>
+            <iframe>
+              src="https://platform.twitter.com/widgets/tweet_button.html?size=l&count=none&url=http://www.tweetypi.co&text=Celebrate%20Pi%20Day%20with&hashtags=onceinalifetime%2CPIday"
+              width="140"
+              height="28"
+              title="Twitter Tweet Button"
+              style="border: 0; overflow: hidden;">
+            </iframe>
           </div>
         </div>
       <% else %>
@@ -31,7 +40,7 @@
           </div>
         </div>
       <% end %>
-      
+
     </div>
   </section>
 </header>
