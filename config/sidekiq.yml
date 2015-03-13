@@ -7,5 +7,3 @@ production:
   :concurrency: 20
 :queues:
   - [default, 1]
-  - [capture_pledge, 5]
-  - [authorize_pledge, 10]
