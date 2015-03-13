@@ -2,6 +2,7 @@ Before<br>
 
 <% if logged_in? %>
   Your awesome <%= current_user.email %>
+  <%= current_user.timezone %>
 <% else %>
   <%= link_to 'Login with Twitter', auth_at_provider_path(:provider => :twitter) %>
 <% end %>

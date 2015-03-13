@@ -1,9 +1,8 @@
 <% flash.each do |k, v| %>
   <div id="<%= k %>"><%= v %></div>
 <% end %>
-
-<%= DateTime.now %>
-
+<br>
+<%= DateTime.now %><br>
 <hr>
 <%= render 'pages/before' %>
 <%= render 'pages/after' %>

@@ -15,4 +15,6 @@
 //= require turbolinks
 //= require_tree .
 
-
+$(document).on('ready page:load', function() {
+  $.cookie('timezone', jstz.determine().name(), { path: '/' });
+});

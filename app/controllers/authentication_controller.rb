@@ -12,6 +12,7 @@ class AuthenticationController < ApplicationController
     else
       begin
         @user = create_from(provider)
+        @user.update(timezone: Time.find_zone(cookies[:timezone]))
         
         reset_session
         auto_login(@user)
