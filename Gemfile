@@ -22,6 +22,7 @@ gem 'high_voltage'
 
 # Users
 gem 'sorcery'
+gem 'twitter'
 
 group :development do
   gem 'quiet_assets'
