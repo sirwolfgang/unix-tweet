@@ -1,0 +1,46 @@
+<% content_for(:site_page_title, 'tweety-pi | celebrating pi-day since today') %>
+<header>
+  <section class="hero">
+    <div class="texture-overlay"></div>
+    <div class="container">
+      <div class="row nav-wrapper">
+        <div class="col-md-4 text-left">
+          <a class="logo" href="/">tweety-pi</a>
+        </div>
+    </div>
+      <div class="row">
+        <div class="col-md-6 text-left tag">
+          <p>TGI PI DAY! We want to help 3.14 million people to tweet at the exact same moment to celebrate Pi hour on Pi day. Will you be one of them?</p>
+          <p>Schedule your tweet to get on the Pi Day Wall of Fame!</p>
+        </div>
+
+      </div>
+
+      <% if logged_in? %>
+        <div class="row hero-content">
+          <div class="col-md-12">
+            <h1>Your tweet has been scheduled!</h1>
+            <p class="lead">It will be sent at your local Pi time (pm) on March 14.</p>
+            <p class="lead">Share tweety-pi with your friends?</p>
+            <iframe
+              src="https://platform.twitter.com/widgets/tweet_button.html?size=l&count=none&url=http://www.tweetypi.co&text=Celebrate%20Pi%20Day%20with&hashtags=onceinalifetime%2CPIday"
+              width="140"
+              height="28"
+              title="Twitter Tweet Button"
+              style="border: 0; overflow: hidden;">
+            </iframe>
+          </div>
+        </div>
+      <% else %>
+        <div class="row hero-content">
+          <div class="col-md-12">
+            <h1 class="animated fadeInDown">Happy Pi Day! 3.14.15 9:26:53 #onceinalifetime</h1>
+            <%= link_to 'Schedule Tweet', auth_at_provider_path(:provider => :twitter), class: 'use-btn animated fadeInUp' %>
+            <i class="fa fa-question-circle fa-2x" rel="tooltip" title="Join the global pi-day celebrations by scheduling a single tweet with the copy above at precisely pi-time. We will never use your authentication for anything else. We swear by our pies."></i>
+          </div>
+        </div>
+      <% end %>
+
+    </div>
+  </section>
+</header>
