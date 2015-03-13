@@ -13,7 +13,6 @@ gem 'bootstrap-sass', '~> 3.1.1'
 gem 'font-awesome-rails'
 gem 'autoprefixer-rails'
 gem 'jquery-rails'
-gem 'asset_sync'
 
 # Extensions
 gem 'turbolinks'
