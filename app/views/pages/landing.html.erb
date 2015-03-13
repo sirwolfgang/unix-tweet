@@ -1,4 +1,9 @@
+<% flash.each do |k, v| %>
+  <div id="<%= k %>"><%= v %></div>
+<% end %>
 
 <%= DateTime.now %>
+
+<hr>
 <%= render 'pages/before' %>
 <%= render 'pages/after' %>

@@ -22,16 +22,15 @@ gem 'high_voltage'
 
 # Users
 gem 'sorcery'
-gem 'email_validator'
 
 group :development do
   gem 'quiet_assets'
+  gem 'pry'
   gem 'pry-rails'
   gem 'pry-rescue'
   gem 'pry-stack_explorer'
   gem 'pry-byebug'
   gem 'byebug'
-  gem 'web-console'
   gem 'rubocop'
   gem 'better_errors'
   gem 'binding_of_caller'

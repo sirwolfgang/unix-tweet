@@ -1,1 +1,9 @@
-Before
+Before<br>
+
+<% if logged_in? %>
+  Your awesome <%= current_user.email %>
+<% else %>
+  <%= link_to 'Login with Twitter', auth_at_provider_path(:provider => :twitter) %>
+<% end %>
+
+<hr>
