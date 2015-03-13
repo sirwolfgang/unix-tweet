@@ -12,9 +12,12 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap
 //= require turbolinks
 //= require_tree .
 
 $(document).on('ready page:load', function() {
+  $("[rel=tooltip]").tooltip({ placement: 'right'});
   $.cookie('timezone', jstz.determine().name(), { path: '/' });
 });
+
