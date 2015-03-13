@@ -593,6 +593,7 @@ Hero
     min-height: 800px;
     background: rgb(40, 70, 102) url('../img/piday-bg.jpg') no-repeat center center;
     background-size: cover;
+    background-attachment: fixed;
     color: #fff;
 }
 .hero h1 {
