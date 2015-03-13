@@ -6,11 +6,11 @@ default: &default
 
 development:
   <<: *default
-  database: pay_it_forward_development
+  database: tweetypi_development
 
 test:
   <<: *default
-  database: pay_it_forward_test
+  database: tweetypi_test
   
 production:
   <<: *default
