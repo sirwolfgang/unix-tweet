@@ -5,15 +5,15 @@ class TweeterWorker
     tweet = Tweet.find(tweet_id)
 
     return if tweet.twitter_id.present?
-    tweet.with_lock do
-      next if tweet.twitter_id.present?
+    #tweet.with_lock do  Doesnt work with pgbouncer...
+    #  next if tweet.twitter_id.present?
 
-      sleep(tweet.scheduled_at - Time.now) while tweet.scheduled_at > Time.now
+    sleep(tweet.scheduled_at - Time.now) while tweet.scheduled_at > Time.now
 
-      begin
-        tweet.send_tweet
-      rescue Twitter::Error::Unauthorized
-      end
+    begin
+      tweet.send_tweet
+    rescue Twitter::Error::Unauthorized
     end
+    #end
   end
 end
