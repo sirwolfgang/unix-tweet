@@ -803,11 +803,10 @@ Wall of Fame
 ========================================================================== */
 .img-circle {
   border-radius: 50%;
-  height: 80px;
-  width: 80px;
-  margin-top: 10px;
-  margin-right: 20px;
-  margin-bottom: 10px;
+  height: 100px;
+  width: 100px;
+  margin: 0;
+  padding: 10px;
   -webkit-transition:0.2s ease;
     transition:0.2s ease;
 }
@@ -815,6 +814,8 @@ Wall of Fame
 .img-circle:hover {
   -webkit-transform: translateZ(0) scale(1.2,1.2);
     -moz-transform: translateZ(0) scale(1.2,1.2);
-    filter: blur(0);
-  -webkit-filter: blur(0);
+	transform: translateZ(0) scale(1.2,1.2);
+ 	 -webkit-filter: blur(0);
+-moz-filter: blur(0)
+ 	filter: blur(0);
  }
