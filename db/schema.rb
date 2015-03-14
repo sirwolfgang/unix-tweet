@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150313041610) do
+ActiveRecord::Schema.define(version: 20150314063732) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +26,17 @@ ActiveRecord::Schema.define(version: 20150313041610) do
 
   add_index "authentications", ["provider", "uid"], name: "index_authentications_on_provider_and_uid", using: :btree
 
+  create_table "tweets", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "url"
+    t.string   "twitter_id"
+    t.datetime "scheduled_at"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  add_index "tweets", ["user_id"], name: "index_tweets_on_user_id", using: :btree
+
   create_table "users", force: :cascade do |t|
     t.string   "email",          null: false
     t.datetime "created_at"
@@ -33,6 +44,8 @@ ActiveRecord::Schema.define(version: 20150313041610) do
     t.string   "timezone"
     t.string   "twitter_token"
     t.string   "twitter_secret"
+    t.string   "avatar_url"
   end
 
+  add_foreign_key "tweets", "users"
 end
