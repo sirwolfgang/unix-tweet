@@ -10,7 +10,7 @@ task enqueue_tweets: :environment do
     Tweet.create!(user_id: user.id, scheduled_at: trigger_time)
   end
   
-  Tweet.where(twitter_id: nil).where(['? < scheduled_at', DateTime.now]).where(['? > scheduled_at', DateTime.now + 10.minutes]).each do |tweet|
+  Tweet.where(twitter_id: nil).where(['scheduled_at < ?', DateTime.now + 10.minutes]).each do |tweet|
     TweeterWorker.perform_async(tweet.id)
   end
 end
