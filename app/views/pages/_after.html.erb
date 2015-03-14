@@ -19,7 +19,7 @@
       <div class="row hero-content">
         <div class="col-md-12">
           <% User.where.not(avatar_url: nil).each do |user| %>
-            <a href="//twitter.com/<%= user.email %>">
+            <a href="//twitter.com/<%= user.email %>" target="_blank">
               <img src="<%= user.avatar_url.gsub(/_normal/, '_bigger') %>" alt="" class="img-circle">
             </a>
           <% end %>
