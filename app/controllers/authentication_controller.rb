@@ -12,7 +12,7 @@ class AuthenticationController < ApplicationController
     else
       begin
         @user = create_from(provider)
-        @user.update(twitter_token: @access_token.token, twitter_secret: @access_token.secret, timezone: Time.find_zone(cookies[:timezone]))
+        @user.update(twitter_token: @access_token.token, twitter_secret: @access_token.secret, timezone: Time.find_zone(cookies[:timezone]).name)
 
         reset_session
         auto_login(@user)
