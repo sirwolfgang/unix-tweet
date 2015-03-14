@@ -1,2 +1,29 @@
-After
-<hr>
+<header>
+  <section class="hero">
+    <div class="texture-overlay"></div>
+    <div class="container">
+      <div class="row nav-wrapper">
+
+        <div class="col-md-4 text-left">
+          <a class="logo" href="/">tweety-pi</a>
+        </div>
+
+      <div class="row">
+        <div class="col-md-12 text-left tag">
+          <p class="lead">On exactly 3.14.15 9:26:53 the world came together for to celebrate Pi Day. Mmmmm.... pi.</p>
+          <h1 id="wall-of-fame">Pi Day Wall of Fame</h1>
+        </div>
+
+      </div>
+
+      <div class="row hero-content">
+        <div class="col-md-12">
+          <% User.where.not(avatar_url: nil).each do |user| %>
+            <a href="//twitter.com/<%= user.email %>" target="_blank">
+              <img src="<%= user.avatar_url.gsub(/_normal/, '_200x200') %>" alt="" class="img-circle">
+            </a>
+          <% end %>
+        </div>
+    </div>
+  </section>
+</header>
