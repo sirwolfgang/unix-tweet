@@ -784,5 +784,13 @@ Bootstrap Modifications
   margin-top: 10px;
   margin-right: 20px;
   margin-bottom: 10px;
-
+  -webkit-transition:0.2s ease;
+    transition:0.2s ease;
 }
+
+.img-circle:hover {
+  -webkit-transform: translateZ(0) scale(1.2,1.2);
+    -moz-transform: translateZ(0) scale(1.2,1.2);
+    filter: blur(0);
+  -webkit-filter: blur(0);
+ }
