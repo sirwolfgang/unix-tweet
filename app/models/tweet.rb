@@ -12,7 +12,7 @@ class Tweet < ActiveRecord::Base
     tweet = client.update('Happy Pi Day! 3.14.15 9:26:53 #onceinalifetime')
 
     ActiveRecord::Base.transaction do
-      update(twitter_id: tweet.id, url: tweet.url.to_s)
+      update(twitter_id: tweet.id.to_s, url: tweet.url.to_s)
       user.update(avatar_url: tweet.user.profile_image_url.to_s) unless tweet.user.default_profile_image?
     end
   end
