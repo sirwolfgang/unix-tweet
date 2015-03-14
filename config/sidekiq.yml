@@ -3,6 +3,6 @@
 staging:
   :concurrency: 10
 production:
-  :concurrency: 10000
+  :concurrency: 100
 :queues:
   - [default, 1]
