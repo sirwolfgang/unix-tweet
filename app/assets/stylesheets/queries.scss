@@ -25,6 +25,7 @@
 	.overlay ul li a{padding:20px 0;min-width:120px;font-size:12px;}
 }
 @media screen and (max-width:465px){
+  .hero {padding: 0 10px;	text-align: center;}
 	.hero h1{font-size:40px;margin:100px 0 45px 0}
 	.screenshots ul li{width:100%;min-height:100%;float:none;}
 	section.video i{font-size:30px;}
