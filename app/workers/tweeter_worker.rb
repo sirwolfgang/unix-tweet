@@ -1,24 +1,15 @@
 class TweeterWorker
   include Sidekiq::Worker
 
-  def perform(user_id)
-    user = User.find(user_id)
-    
-    trigger_time = Time.use_zone(user.timezone) do
-      Time.zone.local(2015, 3, 14, 21, 26, 53).utc
-    end
-    
-    client = Twitter::REST::Client.new do |config|
-      config.consumer_key        = ENV['TWITTER_KEY']
-      config.consumer_secret     = ENV['TWITTER_SECRET']
-      config.access_token        = user.twitter_token
-      config.access_token_secret = user.twitter_secret
-    end
+  def perform(tweet_id)
+    tweet = Tweet.find(tweet_id)
 
-    while trigger_time > Time.now do
-      sleep(trigger_time - Time.now)
+    tweet.with_lock do
+      next if tweet.twitter_id.present?
+
+      sleep(tweet.scheduled_at - Time.now) while tweet.scheduled_at > Time.now
+
+      tweet.send_tweet
     end
-    
-    client.update('Happy Pi Day! 3.14.15 9:26:53 #onceinalifetime')
   end
 end
