@@ -1,5 +1,5 @@
 # This whole idea is terrible, but it works and I want to go to bed
-task :enqueue_tweets do
+task enqueue_tweets: :environment do
   User.find_each do |user|
     next if twitter_token.nil? || twitter_secret.nil? || !tweets.empty?
 
