@@ -3,4 +3,4 @@
 staging:
   :concurrency: 10
 production:
-  :concurrency: 10
+  :concurrency: <%= ENV['MAX_THREADS'] || 16 %>
