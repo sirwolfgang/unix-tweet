@@ -1,8 +1,6 @@
 ---
-:concurrency: 5
+:concurrency: 20
 staging:
-  :concurrency: 10
+  :concurrency: 200
 production:
-  :concurrency: 225
-:queues:
-  - [default, 1]
+  :concurrency: 200
