@@ -4,6 +4,7 @@ class TweeterWorker
   def perform(tweet_id)
     tweet = Tweet.find(tweet_id)
 
+    return if tweet.twitter_id.present?
     tweet.with_lock do
       next if tweet.twitter_id.present?
 
