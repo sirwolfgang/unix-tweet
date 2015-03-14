@@ -10,7 +10,10 @@ class TweeterWorker
 
       sleep(tweet.scheduled_at - Time.now) while tweet.scheduled_at > Time.now
 
-      tweet.send_tweet
+      begin
+        tweet.send_tweet
+      rescue Twitter::Error::Unauthorized
+      end
     end
   end
 end
