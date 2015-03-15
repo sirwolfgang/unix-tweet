@@ -14,6 +14,8 @@ class TweeterWorker
       tweet.send_tweet
     rescue Twitter::Error::Unauthorized
       tweet.update(twitter_id: 'Unauthorized')
+    rescue Twitter::Error::Forbidden
+      tweet.update(twitter_id: 'Forbidden')
     end
     #end
   end
