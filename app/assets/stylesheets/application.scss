@@ -802,6 +802,8 @@ Waypoints
 Wall of Fame
 ========================================================================== */
 .img-circle {
+  background-color: white;
+  background-clip: content-box;
   border-radius: 50%;
   height: 100px;
   width: 100px;
