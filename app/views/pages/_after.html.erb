@@ -28,7 +28,7 @@
       <div class="row hero-content">
         <div class="col-md-12">
           <% User.where.not(avatar_url: nil).order(id: :asc).each do |user| %>
-            <a href="//twitter.com/<%= user.email %>" target="_blank">
+            <a href="http://twitter.com/<%= user.email %>" target="_blank">
               <img src="<%= user.avatar_url.gsub(/_normal/, '_200x200') %>" alt="" class="img-circle">
             </a>
           <% end %>
