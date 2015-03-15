@@ -3,8 +3,8 @@
   timezone ||= Time.zone
 %>
 
-<%# if Time.now < timezone.local(2015, 3, 14, 21, 26, 53).utc %>
+<% if Time.now < timezone.local(2015, 3, 14, 21, 26, 53).utc %>
   <%= render 'pages/before' %>
-<%# else %>
-  <% #= render 'pages/after' %>
-<%# end %>
+<% else %>
+  <%= render 'pages/after' %>
+<% end %>

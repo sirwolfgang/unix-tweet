@@ -18,6 +18,12 @@
 
 $(document).on('ready page:load', function() {
   $("[rel=tooltip]").tooltip({ placement: 'right'});
+  
+  var reload = $.cookie('timezone') === undefined;
   $.cookie('timezone', jstz.determine().name(), { path: '/' });
+  
+  if(reload){
+    Turbolinks.visit('/');
+  }
 });
 
