@@ -8,9 +8,10 @@
         </div>
     </div>
       <div class="row">
-        <div class="col-md-6 text-left tag">
-          <p>TGI PI DAY! We want to help 3.14 million people to tweet at the exact same moment to celebrate Pi hour on Pi day. Will you be one of them?</p>
-          <p>Schedule your tweet to get on the Pi Day Wall of Fame!</p>
+        <div class="col-sm-7">
+          <p>Forget Pi Day. This week, GMT == Geek Mean Time.</p>
+          <p>Fri, 15 May 2015 02:09:25 GMT will be 1010101010101010101010101010101 in Unix. </p>
+          <p>This is the true geek's time. Schedule your tweet and fly your geek flag with pride!</p>
         </div>
 
       </div>
@@ -19,10 +20,10 @@
         <div class="row hero-content">
           <div class="col-md-12">
             <h1>Your tweet has been scheduled!</h1>
-            <p class="lead">It will be sent at your local Pi time (pm) on March 14.</p>
-            <p class="lead">Share tweety-pi with your friends?</p>
+            <p class="lead">It will be sent at Friday May 15 02:09:25 GMT (Geek Mean Time).</p>
+            <p class="lead">Share with your friends?</p>
             <iframe
-              src="https://platform.twitter.com/widgets/tweet_button.html?size=l&count=none&url=http://www.tweetypi.co&text=Celebrate%20Pi%20Day%20with&hashtags=onceinalifetime%2CPiDay%2Ctweetypi"
+              src="https://platform.twitter.com/widgets/tweet_button.html?size=l&count=none&url=http://geektime.tweetypi.co&text=Celebrate%20Geek%20Time%20Day%20with&hashtags=tweetypi%2Cgeektime"
               width="140"
               height="28"
               title="Twitter Tweet Button"
@@ -32,10 +33,10 @@
         </div>
       <% else %>
         <div class="row hero-content">
-          <div class="col-md-12">
-            <h1 class="animated fadeInDown">Happy Pi Day! 3.14.15 9:26:53 #onceinalifetime</h1>
+          <div class="col-xs-9">
+            <h1 style="word-wrap: break-word;" class="animated fadeInDown">At the tweet, the time will be 1010101010101010101010101010101 (Friday May 15 02:09:25 GMT). geektime.tweetypi.co #geektime #unix</h1>
             <%= link_to 'Schedule Tweet', auth_at_provider_path(:provider => :twitter), class: 'use-btn animated fadeInUp' %>
-            <i class="fa fa-question-circle fa-2x" rel="tooltip" title="We will never use your authentication for anything else. We swear by our pies."></i>
+            <i class="fa fa-question-circle fa-2x" rel="tooltip" title="We will never use your authentication for anything else. We swear by the old gods and the new."></i>
             <p>Posted tweet will be exactly as above. That's it.</p>
           </div>
         </div>
