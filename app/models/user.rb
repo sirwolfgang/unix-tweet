@@ -24,6 +24,12 @@ class User < ActiveRecord::Base
       return destroy
     end
 
-    update(avatar_url: twitter_user.profile_image_url.to_s) unless twitter_user.default_profile_image?
+    if twitter_user.default_profile_image?
+      self.avatar_url = nil
+    else
+      self.avatar_url = twitter_user.profile_image_url.to_s
+    end
+
+    save!
   end
 end
