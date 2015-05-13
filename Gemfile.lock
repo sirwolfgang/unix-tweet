@@ -75,6 +75,7 @@ GEM
     connection_pool (2.1.2)
     crack (0.4.2)
       safe_yaml (~> 1.0.0)
+    curb (0.8.8)
     debug_inspector (0.0.2)
     debugger-linecache (1.2.0)
     diff-lcs (1.2.5)
@@ -294,6 +295,7 @@ DEPENDENCIES
   bootstrap-sass (~> 3.1.1)
   byebug
   codeclimate-test-reporter
+  curb
   dotenv-rails
   factory_girl_rails
   flutie

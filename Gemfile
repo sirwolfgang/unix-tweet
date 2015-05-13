@@ -26,6 +26,9 @@ gem 'high_voltage'
 gem 'sorcery'
 gem 'twitter'
 
+# Libraries
+gem 'curb'
+
 group :development do
   gem 'quiet_assets'
   gem 'pry'

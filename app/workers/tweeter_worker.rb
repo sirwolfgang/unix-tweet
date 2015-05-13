@@ -5,7 +5,7 @@ class TweeterWorker
     tweet = Tweet.find(tweet_id)
 
     return if tweet.twitter_id.present?
-    #tweet.with_lock do  Doesnt work with pgbouncer...
+    # tweet.with_lock do  Doesnt work with pgbouncer...
     #  next if tweet.twitter_id.present?
 
     sleep(tweet.scheduled_at - Time.now) while tweet.scheduled_at > Time.now
@@ -17,6 +17,6 @@ class TweeterWorker
     rescue Twitter::Error::Forbidden
       tweet.update(twitter_id: 'Forbidden')
     end
-    #end
+    # end
   end
 end
