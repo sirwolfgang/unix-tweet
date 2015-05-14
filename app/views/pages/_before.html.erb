@@ -10,7 +10,7 @@
       <div class="row">
         <div class="col-sm-7">
           <p>Forget Pi Day. This week, GMT == Geek Mean Time.</p>
-          <p>Fri, 15 May 2015 02:09:25 GMT will be 1010101010101010101010101010101 in Unix. </p>
+          <p>Fri, 15 May 2015 02:09:25 GMT will be 01010101010101010101010101010101 in Unix. </p>
           <p>This is the true geek's time. Schedule your tweet and fly your geek flag with pride!</p>
         </div>
 
@@ -27,15 +27,15 @@
               width="140"
               height="28"
               title="Twitter Tweet Button"
-              style="border: 0; overflow: hidden;">
+              style="border: 0; overflow: hidden; height: 120px;">
             </iframe>
           </div>
         </div>
       <% else %>
         <div class="row hero-content">
           <div class="col-xs-9">
-            <h1 style="word-wrap: break-word;" class="animated fadeInDown">At the tweet, the time will be 1010101010101010101010101010101 (Friday May 15 02:09:25 GMT). geektime.tweetypi.co #geektime #unix</h1>
-            <%= link_to 'Schedule Tweet', auth_at_provider_path(:provider => :twitter), class: 'use-btn animated fadeInUp' %>
+            <h1 style="word-wrap: break-word;" class="animated fadeInDown">At the tweet, the time will be 01010101010101010101010101010101 (Friday May 15 02:09:25 GMT). geektime.tweetypi.co #geektime #unix</h1>
+            <%= link_to 'Schedule Tweet', auth_at_provider_path(provider: :twitter), class: 'use-btn animated fadeInUp' %>
             <i class="fa fa-question-circle fa-2x" rel="tooltip" title="We will never use your authentication for anything else. We swear by the old gods and the new."></i>
             <p>Posted tweet will be exactly as above. That's it.</p>
           </div>

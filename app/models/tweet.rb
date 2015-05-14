@@ -9,7 +9,7 @@ class Tweet < ActiveRecord::Base
       config.access_token_secret = user.twitter_secret
     end
 
-    tweet = client.update('Happy Pi Day! 3.14.15 9:26:53 #onceinalifetime')
+    tweet = client.update('At the tweet, the time will be 01010101010101010101010101010101 (Friday May 15 02:09:25 GMT). geektime.tweetypi.co #geektime #unix')
 
     ActiveRecord::Base.transaction do
       update(twitter_id: tweet.id.to_s, url: tweet.url.to_s)

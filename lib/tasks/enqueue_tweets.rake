@@ -3,9 +3,7 @@ task enqueue_tweets: :environment do
   User.find_each do |user|
     next if user.twitter_token.nil? || user.twitter_secret.nil? || !user.tweets.empty?
 
-    trigger_time = Time.use_zone(user.timezone) do
-      Time.zone.local(2015, 3, 14, 21, 26, 53).utc
-    end
+    trigger_time = Time.new(2015, 5, 15, 2, 9, 25).utc
 
     Tweet.create!(user_id: user.id, scheduled_at: trigger_time)
   end
